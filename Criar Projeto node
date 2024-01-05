@@ -1,0 +1,68 @@
+Clone o Repositório do GitHub:
+
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+Crie um Dockerfile:
+Na raiz do seu projeto, crie um arquivo chamado Dockerfile sem extensão e adicione o seguinte conteúdo:
+
+#nano Dockerfile
+
+COPIE TUDO 
+------------------------------------------------------------
+
+# Use uma imagem base do Node.js
+FROM node:14
+
+# Crie o diretório de trabalho
+WORKDIR /usr/src/app
+
+# Copie os arquivos de configuração e dependências
+COPY package*.json ./
+
+# Instale as dependências
+RUN npm install
+
+# Copie os arquivos do código-fonte
+COPY . .
+
+# Construa o aplicativo
+RUN npm run build
+
+# Exponha a porta em que o aplicativo será executado
+EXPOSE 3000
+
+# Comando para iniciar o aplicativo
+CMD [ "npm", "start" ]
+
+------------------------------------------------------------
+
+Construa a Imagem Docker:
+No diretório onde está o Dockerfile, execute o seguinte comando para construir a imagem Docker:
+
+#docker build -t nome-do-seu-app .
+
+Execute o Contêiner Docker:
+Agora, você pode executar o contêiner Docker com o seguinte comando:
+
+#docker run -p 3000:3000 -d nome-do-seu-app
+Isso mapeará a porta 3000 do contêiner para a porta 3000 do host. Ajuste conforme necessário.
+
+Descubra o ID ou o nome do contêiner:
+Execute o seguinte comando para listar os contêineres em execução:
+
+#docker ps -al
+Copie o ID ou o nome do contêiner associado ao seu aplicativo.
+
+Acesse o terminal do contêiner:
+Utilize o comando docker exec para acessar o terminal do contêiner. Substitua <ID_DO_CONTEINER> pelo ID ou nome do seu contêiner:
+
+#docker exec -it <ID_DO_CONTEINER> /bin/bash
+#ls
+#exit
+Se estiver usando uma imagem que usa um shell diferente do bash, ajuste o comando de acordo.
+
+
+Acesse o Aplicativo no Navegador:
+Abra seu navegador e vá para http://seu-endereco-ip:3000 ou http://seu-domínio:3000 para verificar se o aplicativo está sendo executado corretamente.
+
+Lembre-se de ajustar as configurações de porta, URL e outras configurações de acordo com as necessidades específicas do seu projeto. Este exemplo supõe que o seu projeto utiliza a porta 3000, que é comum para aplicativos Node.js, mas você deve ajustar conforme necessário.
