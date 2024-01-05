@@ -1,0 +1,40 @@
+Bandit0 SENHA bandit0
+ls
+
+bandit1 SENHA NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+ls, cat
+
+bandit2 SENHA rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+cat ./
+
+bandit3 SENHA aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+Comando: cd inhere, cat .hedden
+
+bandit4 SENHA 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+Comando: Comando: cat -file*
+
+bandit5 SENHA lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+Comando: find inhere -type f -size 1033c ! -executable -exec file {} \; | grep "ASCII"
+
+bandit6 SENHA P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+Comando: find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+bandit7 SENHA z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+Comando: cat data.txt | grep millionth
+
+bandit8 SENHA TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+Comando: cat data.txt | sort | uniq -u
+
+bandit9 SENHA EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+Comando: strings data.txt | grep -oP '=+[[:print:]]+' | sed 's/^=//'
+
+bandit10 SENHA G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+Comando: base64 -d data.txt
+
+bandit11 SENHA 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+Comando: cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+bandit12 SENHA JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+Comando: 
+ 
+
