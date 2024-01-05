@@ -1,0 +1,39 @@
+Atualizar a Lista de Pacotes:
+Certifique-se de que sua lista de pacotes esteja atualizada:
+
+#su -
+#apt update
+Isso solicitará a senha do usuário root.
+
+Instalar Dependências:
+Instale as dependências necessárias:
+
+#apt install apt-transport-https ca-certificates curl software-properties-common
+
+Adicionar Chave GPG do Docker:
+Adicione a chave GPG oficial do Docker:
+
+#curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+Configurar Repositório Estável:
+Adicione o repositório estável do Docker:
+
+#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+Substitua $(lsb_release -cs) pelo codinome da versão do Debian.
+
+Instalar Docker Engine:
+Atualize a lista de pacotes novamente e instale o Docker Engine:
+
+#apt update
+#apt install docker-ce docker-ce-cli containerd.io
+
+Gerenciar o Docker como um Usuário Não-root (Opcional):
+Se desejar executar comandos Docker sem usar sudo, adicione seu usuário ao grupo docker:
+
+#usermod -aG docker $USER
+Faça logout e login novamente ou reinicie o sistema para que as alterações tenham efeito.
+
+Verificar a Instalação:
+Verifique se o Docker está instalado corretamente executando:
+
+#docker --version
