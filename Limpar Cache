@@ -1,0 +1,32 @@
+Para excluir o cache DNS em um computador, você pode seguir as instruções abaixo com base no sistema operacional que está utilizando:
+
+Windows:
+Abra o prompt de comando como administrador. Para fazer isso, pressione Win + X e escolha "Prompt de Comando (Admin)" ou "PowerShell (Admin)".
+
+Digite o seguinte comando e pressione Enter:
+
+#ipconfig /flushdns
+Você verá a mensagem "O cache de resolução do DNS foi esvaziado com êxito."
+
+macOS:
+Abra o Terminal, que está localizado em "Aplicativos" > "Utilitários" > "Terminal".
+
+Digite o seguinte comando e pressione Enter:
+
+#killall -HUP mDNSResponder
+Você precisará digitar a senha de administrador para confirmar.
+
+Linux:
+Abra o terminal.
+
+Dependendo da distribuição Linux que você está usando, o comando pode variar. Em muitas distribuições, você pode usar:
+
+#sudo systemd-resolve --flush-caches
+
+Em algumas distribuições mais antigas, você pode tentar:
+
+#sudo /etc/init.d/nscd restart
+
+Lembre-se de que a limpeza do cache DNS pode exigir privilégios de administrador (root) em alguns sistemas. Certifique-se de ter essas permissões ao executar os comandos.
+
+Após executar esses comandos, o cache DNS será limpo, e o sistema precisará consultar novamente os servidores DNS para obter informações atualizadas.
