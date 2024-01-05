@@ -44,7 +44,7 @@ No diretório onde está o Dockerfile, execute o seguinte comando para construir
 Execute o Contêiner Docker:
 Agora, você pode executar o contêiner Docker com o seguinte comando:
 
-#docker run -p 3000:3000 -d nome-do-seu-app
+#docker run -p 80:3000 -d nome-do-seu-app
 Isso mapeará a porta 3000 do contêiner para a porta 3000 do host. Ajuste conforme necessário.
 
 Descubra o ID ou o nome do contêiner:
