@@ -1,0 +1,25 @@
+Para parar o serviço Apache no Debian, você pode usar o comando systemctl. Aqui estão os passos:
+
+Abra um terminal.
+
+Execute o seguinte comando como superusuário (root) ou usando o comando sudo:
+
+bash
+Copy code
+sudo systemctl stop apache2
+
+Este comando irá parar o serviço Apache imediatamente.
+
+Se você quiser desativar o Apache para que ele não inicie automaticamente durante o boot, você pode usar o comando:
+
+bash
+Copy code
+sudo systemctl disable apache2
+
+Lembre-se de que você precisará reiniciar o sistema ou iniciar o Apache manualmente se desejar reativá-lo no futuro.
+
+
+
+
+
+
