@@ -1,5 +1,10 @@
 ## NESSE SCRIPT ELE FAZ TUDO QUE ESTÁ DOCUMENTADO EM UM SÓ SCRIPT (esteja no mode ROOT), POREM LEMBRE DE ATUALIZAR PARA O SEU GIT CLONE E MUDAR O NOME DO REPOSITORIO QUE ESTA ACESANDO NO COMANDO CD ##
 
+Criar Script:  nano scriptnode.sh
+Dar Permissão ao Script: chmod +x scriptnode.sh
+Executar Script: ./scriptnode.sh
+
+CONTEUDO DO SCRIPT ABAIXO: 
 ------------------------------------------------------------------------------------------------
 
 #!/bin/bash
