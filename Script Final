@@ -80,12 +80,7 @@ docker build -t nome-do-seu-app .
 docker run -p 80:3000 -d nome-do-seu-app
 
 # Descubra o ID ou o nome do contêiner
-docker ps -a
-
-# Acesse o terminal do contêiner
-docker exec -it <ID_DO_CONTEINER> /bin/bash
-ls
-exit
+docker ps -a 
 
 echo "Acesse o aplicativo no navegador: http://seu-endereco-ip:3000 ou http://seu-domínio:3000"
 echo "Lembre-se de ajustar as configurações de porta, URL e outras configurações conforme necessário."
