@@ -8,13 +8,14 @@ CONTEUDO DO SCRIPT ABAIXO:
 ------------------------------------------------------------------------------------------------
 
 #!/bin/bash
+set -e
+set -x
 
 # Atualizar a Lista de Pacotes
-su -
 apt update
 
 # Instalar Dependências
-apt install apt-transport-https ca-certificates curl software-properties-common
+apt install apt-transport-https ca-certificates curl software-properties-common -y
 
 # Adicionar Chave GPG do Docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -24,7 +25,7 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] 
 
 # Instalar Docker Engine
 apt update
-apt install docker-ce docker-ce-cli containerd.io
+apt install docker-ce docker-ce-cli containerd.io -y
 
 # Gerenciar o Docker como um Usuário Não-root (Opcional)
 usermod -aG docker $USER
